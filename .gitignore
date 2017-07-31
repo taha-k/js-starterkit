@@ -60,3 +60,6 @@ typings/
 # ide files
 .idea/**/**
 
+# other files to ignore
+src/api/db.json
+
