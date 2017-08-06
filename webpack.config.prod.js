@@ -4,7 +4,6 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import WebpackMd5Hash from 'webpack-md5-hash';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
-console.log("trackjs", process.env.trackJSToken, process.env)
 export default {
   debug: true,
   devtool: 'source-map',
