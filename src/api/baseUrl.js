@@ -2,7 +2,7 @@
  * Created by taha on 7/31/17.
  */
 export default function getBaseUrl() {
-  return getQueryStringParameterByName('useMockApi')? 'http://localhost:3001/' : '/';
+  return getQueryStringParameterByName('useMockApi')? 'http://localhost:3001/' : 'https://example-api-upload.herokuapp.com/';
 }
 
 function getQueryStringParameterByName(name, url) {
