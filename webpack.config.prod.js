@@ -4,6 +4,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import WebpackMd5Hash from 'webpack-md5-hash';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
+console.log("trackjs", process.env.trackJSToken, process.env)
 export default {
   debug: true,
   devtool: 'source-map',
@@ -46,7 +47,10 @@ export default {
         minifyCSS: true,
         minifyURLs:true
       },
-      inject: true
+      inject: true,
+      // Properties you define here are available in index.html
+      // using htmlWebpackPlugin.options.varName
+      trackJSToken: process.env.trackJSToken
     }),
     // Eliminate duplicate packages when generating bundle
     new webpack.optimize.DedupePlugin(),
