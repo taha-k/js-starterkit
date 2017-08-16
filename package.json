@@ -22,9 +22,9 @@
     "build": "babel-node buildScripts/build.js",
     "postbuild": "babel-node buildScripts/distServer.js",
     "deploy": "surge ./dist",
-    "prestart": "npm-run-all clean-dist test lint",
-    "start": "babel-node buildScripts/build.js",
-    "poststart": "node index.js"
+    "prestart2": "npm-run-all clean-dist test lint",
+    "start2": "babel-node buildScripts/build.js",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",

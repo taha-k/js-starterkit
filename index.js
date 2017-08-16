@@ -2,20 +2,16 @@
  * Created by taha on 8/16/17.
  */
 
-let express =  require('express');
-let cors = require('cors');
-const path = require('path');
+var express =  require('express');
+var cors = require('cors');
 
 const app = express();
 app.use(cors());
 
-app.use(express.static(__dirname + '/dist'));
-
 app.set('port', (process.env.PORT || 5000));
 
 app.get('/', function(request, response) {
-  response.send('Hello World!');
-  //res.sendFile(path.join(__dirname, 'dist/index.html'));
+  response.send('Hello World!')
 });
 
 app.get('/users', function(req, res) {
