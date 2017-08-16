@@ -14,8 +14,8 @@ app.use(express.static(__dirname + '/dist'));
 app.set('port', (process.env.PORT || 5000));
 
 app.get('/', function(request, response) {
-  response.send('Hello World!');
-  //res.sendFile(path.join(__dirname, 'dist/index.html'));
+  //response.send('Hello World!');
+  response.sendFile(path.join(__dirname, 'dist/index.html'));
 });
 
 app.get('/users', function(req, res) {
