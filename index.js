@@ -8,7 +8,7 @@ const path = require('path');
 const app = express();
 app.use(cors());
 
-app.use(express.static('dist'));
+app.use(express.static(__dirname + '/dist'));
 
 app.set('port', (process.env.PORT || 5000));
 
