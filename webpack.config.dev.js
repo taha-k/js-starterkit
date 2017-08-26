@@ -23,7 +23,19 @@ export default {
   module: {
     loaders: [
       {test: /\.js$/, exclude: /node_modules/, loaders: ['babel']},
-      {test: /\.css$/, loaders: ['style','css']}
-    ]
+      {test: /\.css$/, loaders: ['style','css']},
+      {test: /\.scss$/, loaders: ['style','css', 'sass']},
+      {
+        test: /\.(ttf|eot|woff|woff2)$/,
+        loader: 'file-loader',
+        options: {
+          name: 'fonts/[name].[ext]',
+        },
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/,
+        loader: "file"
+      }
+    ],
   }
 }

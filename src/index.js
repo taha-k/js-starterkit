@@ -1,8 +1,9 @@
 /**
  * Created by taha on 7/30/17.
  */
-import './index.css';
-
+//import './index.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import './scss/agency.scss';
 import {getUsers, deleteUser} from './api/userApi';
 
 getUsers().then(result => {
