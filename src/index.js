@@ -1,12 +1,15 @@
 /**
  * Created by taha on 7/30/17.
  */
-//import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
+import 'font-awesome/css/font-awesome.css';
+import './scss/fonts.scss';
 import './scss/agency.scss';
-import {getUsers, deleteUser} from './api/userApi';
+//import {getUsers, deleteUser} from './api/userApi';
+import {agency} from './js/agency';
 
-getUsers().then(result => {
+agency();
+/*getUsers().then(result => {
   let usersBody = "";
 
   result.forEach(user => {
@@ -34,4 +37,4 @@ getUsers().then(result => {
       row.parentNode.removeChild(row);
     }
   });
-});
+});*/

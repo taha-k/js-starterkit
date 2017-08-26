@@ -5,3 +5,9 @@
 /* eslint-disable no-unused-vars */
 
 import fetch from 'whatwg-fetch';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'font-awesome/css/font-awesome.css';
+import 'font-awesome/css/font-awesome.css';
+import $ from 'jquery';
+import 'bootstrap/dist/js/bootstrap';
+

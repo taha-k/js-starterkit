@@ -1,5 +1,6 @@
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import webpack from 'webpack';
 
 export default {
   debug: true,
@@ -18,6 +19,11 @@ export default {
     new HtmlWebpackPlugin({
       template: 'src/index.html',
       inject: true
+    }),
+    new webpack.ProvidePlugin({
+      jQuery: 'jquery',
+      $: 'jquery',
+      jquery: 'jquery'
     })
   ],
   module: {
@@ -25,17 +31,7 @@ export default {
       {test: /\.js$/, exclude: /node_modules/, loaders: ['babel']},
       {test: /\.css$/, loaders: ['style','css']},
       {test: /\.scss$/, loaders: ['style','css', 'sass']},
-      {
-        test: /\.(ttf|eot|woff|woff2)$/,
-        loader: 'file-loader',
-        options: {
-          name: 'fonts/[name].[ext]',
-        },
-      },
-      {
-        test: /\.(jpe?g|png|gif|svg)$/,
-        loader: "file"
-      }
+      {test: /\.(jpe?g|png|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/, loader: 'url-loader?limit=100000'},
     ],
   }
 }
